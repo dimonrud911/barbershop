@@ -1,0 +1,23 @@
+<h2>My work at this week:</h2>
+
+<%= form_for :admins, url: admins_path do |f| %>
+
+  <p>
+    <%= f.label :day_of_the_week %>
+    <select name="admins[wday]">
+      <% @day_of_week.each do |key, value| %>
+        <option><%= value %></option>
+      <% end %>
+    </select>
+  </p>
+  <p>
+    <%= f.label :i_work_from %>
+    <%= select_hour(@work_hour, field_name: 'start', start_hour:@start, end_hour:@end) %>
+  </p>
+  <p>
+    <%= f.label :to %>
+    <%= select_hour(@work_hour, field_name: 'end', start_hour:@start, end_hour:@end) %>
+  </p>
+
+  <%= f.submit %>
+<% end %>

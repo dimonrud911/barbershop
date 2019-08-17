@@ -1,0 +1,24 @@
+<h2>New entry:</h2>
+
+<%= form_for :barbers, url: barbers_path do |f| %>
+
+  <p>
+  <%= f.label :select_day %>
+    <select name="barbers[day]">
+    <% @day_of_week.each do |key, value| %>
+      <option><%= value %></option>
+    <% end %>
+    </select>
+  </p>
+
+  <p>
+    <%= f.label :select_hour %>
+    <%= select_hour(@work_hour, field_name: 'hour', start_hour: @start, end_hour:@end ) %>
+  </p>
+  
+  <p>
+    <%= f.label :phone %>
+    <%= f.text_area :phone %>
+  </p>
+    <%= f.submit %>
+<% end %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  day: 2019-08-12
+  hour: 2019-08-12 09:00:17
+  phone: MyString
+
+two:
+  day: 2019-08-12
+  hour: 2019-08-12 09:00:17
+  phone: MyString
